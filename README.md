@@ -1,18 +1,20 @@
-# Linux Shell Scripting
+# Linux Bash Shell Scripting
 
-## Description
-Shell scripts to automate various basic system admin tasks<br/>
+Shell scripts to automate various basic system admin tasks. <br/>
 
-## Technology
-`distro:` Ubuntu 20.04 LTS<br/>
-`shell:` bash<br/>
+## Technologies
+Technoloies I used for this project are: <br/>
+`Envitonment`: `Ubuntu 20.04 LTS`<br/>
+`Shell`: `Bash`<br/>
 
 ## Files
-|-: File| -: Description|
-|executables| script to find all executable files in the PATH variable|
-|addusers| script to automate creating user accounts|
+
+|**File name**| **Brief Description**|
+|:-------------|----------------------|
+|executables| a scripts that searches for al executable files in PATH|
+|addusers| a script that creates new user accounts|
 
 ## Contributors
 Collins Mmasaba<br/>
-[`Email:`](collins.mmasaba@azubiafrica.org)<br/>
-&copy 2022 
+[`email:`](collins.mmasaba@azubiafrica.org)
+© 2022

@@ -16,5 +16,5 @@ Technoloies I used for this project are: <br/>
 
 ## Contributors
 Collins Mmasaba<br/>
-[`email:`](collins.mmasaba@azubiafrica.org)<br/>
+[`Email`](collins.mmasaba@azubiafrica.org)<br/>
 © 2022

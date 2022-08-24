@@ -1,0 +1,20 @@
+#! /bin/bash
+
+# finding executable files in the system by looking at the PATH variable
+
+IFS.OLD=IFS
+IFS=:
+for directory in $PATH
+do
+	echo "Inside $directory:"
+	for file in $directory/*
+	do
+		if [ -x $file ]
+		then
+			echo "	$file is executable"
+		else
+			echo "	No executable file"
+		fi
+	done
+done
+IFS=IFS.OLD

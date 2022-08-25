@@ -13,6 +13,7 @@ Technoloies I used for this project are: <br/>
 |:-------------|----------------------|
 |executables| a scripts that searches for al executable files in PATH|
 |addusers| a script that creates new user accounts|
+|calc| illustration of how to handle user input|
 
 ## Contributors
 Collins Mmasaba<br/>

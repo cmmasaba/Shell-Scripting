@@ -1,0 +1,58 @@
+#! /bin/bash
+
+# a shell script that performs simple mathematical operations
+# implements concepts about handling user input including options,
+# parameters and reading input from the user
+
+while getopts :adsmh math
+do
+	case "$math" in
+		a) echo "Addition:"
+			read -p "Enter the two numbers: " a1 a2
+			if [ -n "$a1" ] && [ -n "$a2" ]
+			then
+				total=$(echo "scale=6;$a1+$a2" | bc)
+				echo "$a1 plus $a2 is $total"
+			else
+				echo "Not enough arguments."
+				echo "Enter two numbers separated by space."
+			fi;;
+		d) echo "Division:"
+			read -p "Enter two numbers: " a1 a2
+			if [ -n "$a1" ] && [ -n "$a2" ]
+			then
+				total=$(echo "scale=6;$a1/$a2" | bc)
+				echo "The quotient of $a1 and $a2 is $total"
+			else
+				echo "Not enough arguments."
+				echo "Enter two numbers separated by space."
+			fi;;
+		s) echo "Subtraction:"
+			read -p "Enter two numbers: " a1 a2
+			if [ -n "$a1" ] && [ -n "$a2" ]
+			then
+				total=$(echo "scale=6;$a1-$a2" | bc)
+				echo "$a1 minus $a2 is $total"
+			else
+				echo "Not enough arguments."
+				echo "Enter two numbers separated by space."
+			fi;;
+		m) echo "Multiplication:"
+			read -p "Enter two numbers: " a1 a2
+			if [ -n "$a1" ] && [ -n "$a2" ]
+			then
+				total=$(echo "scale=6;$a1*$a2" | bc)
+				echo "$a1 multiply by $a2 is $total"
+			else
+				echo "Not enough arguments."
+				echo "Enter two numbers separated by space."
+			fi;;
+		h) echo "Shell Calculator help page:"
+			echo "On using options:"
+			echo "	-a: to perform addition."
+			echo "	-s: to perform subtraction."
+			echo "	-d: to perform division."
+			echo "	-m: to perform multiplication.";;
+		*) echo "Unknown option: $math";;
+	esac
+done

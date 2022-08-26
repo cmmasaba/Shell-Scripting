@@ -14,6 +14,7 @@ Technoloies I used for this project are: <br/>
 |executables| a scripts that searches for al executable files in PATH|
 |addusers| a script that creates new user accounts|
 |calc| illustration of how to handle user input|
+|sql| script that reads data from csv files, parses the data and creates INSERT statements for a MySQL database|
 
 ## Contributors
 Collins Mmasaba<br/>

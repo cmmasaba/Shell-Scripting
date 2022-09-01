@@ -1,0 +1,6 @@
+#! /bin/bash
+
+# this scripts inserts line numbers to the input file and saves the output to the numbered file
+# the input file is provided on the command line when the script is run
+
+sed '=' $1 | sed 'N; s/\n/\)	/' >> numbered

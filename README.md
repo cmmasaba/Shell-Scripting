@@ -15,8 +15,12 @@ Technoloies I used for this project are: <br/>
 |addusers| a script that creates new user accounts|
 |calc| illustration of how to handle user input|
 |sql| script that reads data from csv files, parses the data and creates INSERT statements for a MySQL database|
+|delete_blanks| script that removes leading, trailing and consecutive blank lines in a text file|
+|delete_html_tags| script that can remove html tags from downloaded text|
+|double_space| scrip[t that can format a text fime with double spacing|
+|numbering| script that can number a text file|
 
 ## Contributors
 Collins Mmasaba<br/>
-[`Email`](collins.mmasaba@azubiafrica.org)<br/>
+`Email`<collins.mmasaba@azubiafrica.org><br/>
 © 2022

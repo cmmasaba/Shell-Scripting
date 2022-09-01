@@ -1,0 +1,34 @@
+#! /bin/bash
+
+# this script deletes blank lines in a text fil
+# you can specify to delete leading, consecutive or trailing blank lines by specifying the option flag
+# provide the input file and the option on the command line
+
+# erasing contents of trimmed file before inserting new data in it
+cat /dev/null > trimmed
+
+while getopts :clt option
+do
+	case "$option" in
+		c) echo "Deleteing consecutive blank lines..."
+			sed '/./,/^$/!d' $2 >> trimmed
+			echo "Done.";;
+		l) echo "Deleting leading blank lines..."
+			sed '/./,$!d' $2 >> trimmed
+			echo "Done.";;
+		t) echo "Deleting trailing blank lines..."
+			sed '{
+			: start
+			/^\n*$/{$d; N; b start}
+			}' $2 >> trimmed
+			echo "Done.";;
+		*) echo "Unknown option: $math"
+			echo "Help page."
+			echo "Usage: delete_blanks -option filename"
+			echo "Available options are:
+			 1. c; delete consecutive blank lines in a file.
+			 2. l; delete leading blank lines in a file.
+			 3. t; delete trailing blank lines in a file."
+			echo ;;
+	esac
+done

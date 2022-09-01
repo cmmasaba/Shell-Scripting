@@ -1,0 +1,7 @@
+#! /bin/bash
+# the scripts uses regular expressions to format a file that may require double spacing between lines
+# the file with input data is provided on the command line when running the script
+# first it deletes any preexisting double lines in the file before inserting the blank lines
+# the output is saved to a file called double
+
+sed '/^$/d; $!G' $1 >> double

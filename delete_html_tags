@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# this scripts removes html tags from text that may be downloaded from the internet
+# the formatted data is stored in another file, clean_text
+# provide the input file on the command line when executing the script
+
+# erase any data that may be in this text file from before
+cat /dev/null > clean_text
+
+sed 's/<[^>]*>//g ; /^$/d' $1 >> clean_text

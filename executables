@@ -16,5 +16,5 @@ do
 			echo "	No executable file"
 		fi
 	done
-done
+done | less
 IFS=IFS.OLD

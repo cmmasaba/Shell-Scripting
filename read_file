@@ -1,0 +1,18 @@
+#! /bin/bash
+
+# reading contents of a file using loops
+# changing the value of IFS field to allow my custom field separators
+
+IFS.OLD=$IFS
+IFS=$'\n'
+for entry in $(cat /etc/passwd)
+do
+	echo "The entries in $entry are: "
+	IFS=:
+	for item in $entry
+	do
+		echo "	$item"
+	done
+done
+# restoring the value of the IFS variable
+IFS=IFS.OLD

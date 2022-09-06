@@ -1,0 +1,24 @@
+#! /bin/bash
+
+# a shell script to help parse user contact details and output only valid details
+# this script employs the use of gawk regular expressions
+# the unfiltered user details are stored in a csv file
+# assuming the fields in the csv file are; username, phone number and email
+# to execute the program, provide the csv file on the command line along with the script's name
+# for example "./parse_details data.csv"
+# the filtered information is stored in a file 'output'
+
+# clearing the contents of the output file
+cat /dev/null > output
+
+# provide the headings for the output file
+echo "username:phone number:email" | gawk '
+BEGIN{FS=":"; OFS=" "}
+{printf "%-15s %-20s %-30s\n", $1, $2, $3}' >> output
+# first parse the contact details and then pipe the output to a second regex that parses the email
+gawk --re-interval '
+BEGIN{FS=","} 
+$2 ~ /^\+?2540?7[0-9]{8}$/' $1 |
+gawk --re-interval '
+BEGIN{FS=","; OFS=" "}
+$3 ~ /^([a-zA-Z0-9_\-.\+]+)@([a-zA-Z0-9_\-.]+).([a-zA-Z]{2,5})$/{printf "%-15s %-20s %-30s\n", $1, $2, $3}' >> output

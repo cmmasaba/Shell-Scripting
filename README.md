@@ -19,6 +19,12 @@ Technoloies I used for this project are: <br/>
 |delete_html_tags| script that can remove html tags from downloaded text|
 |double_space| scrip[t that can format a text fime with double spacing|
 |numbering| script that can number a text file|
+|parse_details| filters incorrectly contact details that may be collected from forms|
+|Daily_Archive.sh| performs daily backups of specified directories in the Linux system|
+|Delete_User.sh| removes an account from the system|
+|Disk_Check.sh| creates a report of disk usage in the system|
+|parse_details| uses regex to filter valid details from an entry form|
+
 
 ## Contributors
 Collins Mmasaba<br/>
